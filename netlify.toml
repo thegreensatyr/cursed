@@ -1,0 +1,13 @@
+# Cursed Worlds — Netlify config
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/read"
+  to = "/read.html"
+  status = 200
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
